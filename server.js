@@ -15,7 +15,10 @@ app.post("/api/v1/createData", (req, res) => {
 })
 
 app.put("/api/v1/updateData", (req, res) => {
-
+    const { name, email } = req.body
+    const { id } = req.params
+    data.findIndex(info => info.id == id)
+    data.push({ name, email, id: Math.random() })
 })
 app.delete("/api/v1/deleteData", (req, res) => {
 
