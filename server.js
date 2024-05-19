@@ -8,6 +8,7 @@ app.get("/api/v1/getData", (req, res) => {
     res.send({ data })
 
 })
+
 app.post("/api/v1/createData", (req, res) => {
     const { name, email } = req.body
     data.push({ name, email, id: Math.random() })
